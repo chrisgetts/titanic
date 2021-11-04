@@ -22,16 +22,15 @@ These two outputs will be saved to a folder called "models/".
 The api requires only 3 fields: Age (int), Sex (str: "male" or "female"), and Embarked (str: "S", "C", "Q").  
 The api should return a prediction either 1 or 0.  
 
-![Alt text](img/api_request.PNG?raw=true "Request")  
-![Alt text](img/api_response.PNG?raw=true "Response")  
-
 **Example**  
 Request body *{  
   "Age": 22,    
   "Sex": "female",  
   "Embarked": "Q"  
 }*  
-  
+![Alt text](img/api_request.PNG?raw=true "Request")  
+
 200 Response *{     
   "prediction": 1  
 }*  
+![Alt text](img/api_response.PNG?raw=true "Response")  
