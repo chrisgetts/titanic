@@ -5,13 +5,13 @@ This repo serves as a POC for (1) packaging a ML model into an API and (2) conta
   (2) model_columns.pkl - the columns used in the random forest classifier.  
 These two outputs will be saved to a folder called "models/".  
   
-CMD: `python train.py`  
+  CMD: `python train.py`  
 
 2. build the docker image. In the same directory as Dockerfile run the following  
-CMD: `docker build -t titanic . `  
+  CMD: `docker build -t titanic . `  
 
 3. deploy the docker container.  
-CMD: `docker build -t -i -p 8000:8000 titanic`
+  CMD: `docker build -t -i -p 8000:8000 titanic`
 
 4. navigate to `localhost:8000`. You should see the following message.
   *{"message":"Hello, stranger"}*
