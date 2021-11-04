@@ -21,12 +21,12 @@ The api requires only 3 fields: Age (int), Sex (str: "male" or "female"), and Em
 The api should return a prediction either 1 or 0.  
 
 **Example**  
-Request body *{
-  "Age": 22,  
+Request body *{  
+  "Age": 22,    
   "Sex": "female",  
   "Embarked": "Q"  
 }*  
   
-200 Response *{  
+200 Response *{     
   "prediction": 1  
 }*  
