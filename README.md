@@ -5,13 +5,15 @@ This repo serves as a POC for (1) packaging a ML model into an API and (2) conta
   (2) model_columns.pkl - the columns used in the random forest classifier.  
 These two outputs will be saved to a folder called "models/".  
   CMD: `python train.py`  
-  ![Alt text](img/train.PNG?raw=true "Title")
+  ![Alt text](img/train.PNG?raw=true "Training")
 
 2. build the docker image. In the same directory as Dockerfile run the following  
   CMD: `docker build -t titanic . `  
+  ![Alt text](img/docker_build.PNG?raw=true "Building")
 
 3. deploy the docker container.  
   CMD: `docker build -t -i -p 8000:8000 titanic`
+  ![Alt text](img/docker_run.PNG?raw=true "Deploying")
 
 4. navigate to `localhost:8000`. You should see the following message.
   *{"message":"Hello, stranger"}*
@@ -19,6 +21,9 @@ These two outputs will be saved to a folder called "models/".
 5. test out the api via swagger docs by navigating to `localhost:8000/docs`  
 The api requires only 3 fields: Age (int), Sex (str: "male" or "female"), and Embarked (str: "S", "C", "Q").  
 The api should return a prediction either 1 or 0.  
+
+![Alt text](img/aoi_request.PNG?raw=true "Request")
+![Alt text](img/aoi_response.PNG?raw=true "Response")
 
 **Example**  
 Request body *{  
